@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: antiquewhite;
+}
+
+section.calculatrice {
+    width: 400px;
+    height: 600px;
+    border: 2px solid antiquewhite;
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "show"
+        "buttons"
+    ;
+}
+
+.calculatrice__affichage {
+    grid-area: show;
+    width: 100%;
+    background-color: rgb(101, 101, 101);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.calculatrice__affichage--show {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 52px;
+    font-weight: 700;
+    padding: 20px 15px;
+    background-color: rgb(54, 73, 74);
+    color: rgb(113, 193, 167);
+    width: 100%;
+}
+
+.calculatrice__affichage--calcul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px 15px 0;
+    font-style: italic;
+    color: rgb(239, 181, 95);
+}
+
+.calculatrice__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "ac ac pourcent division"
+        "sept huit neuf multiply"
+        "quatre cinq six soustraction"
+        "un deux trois addition"
+        "zero zero virgule egale"
+    ;
+}
+
+.calculatrice__buttons--btn {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.calculatrice__buttons--btn:nth-child(1),
+.calculatrice__buttons--btn:nth-child(2) {
+    background-color: rgb(58, 58, 58);
+    color: antiquewhite;
+}
+.calculatrice__buttons--btn:nth-child(3),
+.calculatrice__buttons--btn:nth-child(7),
+.calculatrice__buttons--btn:nth-child(11),
+.calculatrice__buttons--btn:nth-child(15),
+.calculatrice__buttons--btn:nth-child(18) {
+    background-color: rgb(244, 122, 14);
+    color: antiquewhite;
+}
+
+.calculatrice__buttons--btn:nth-child(1) {
+    grid-area: ac;
+}
+.calculatrice__buttons--btn:nth-child(16) {
+    grid-area: zero;
+}
+
