@@ -7,15 +7,20 @@
     <title>Calculatrice Vanilla JS</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- JS -->
+    <script src="./assets/javascripts/script.js" defer></script>
   </head>
   <body>
     <h1>Calculatrice</h1>
     <section class="calculatrice">
       <div class="calculatrice__affichage">
-        <span class="calculatrice__affichage--show">
-          04
-        </span>
-        <span class="calculatrice__affichage--calcul">54+54</span>
+        <span class="calculatrice__affichage--show" id="calculatriceShowResult">
+          0</span
+        >
+        <span
+          class="calculatrice__affichage--calcul"
+          id="calculatriceShowCalcul"
+        ></span>
       </div>
       <div class="calculatrice__buttons">
         <button class="calculatrice__buttons--btn">AC</button>
@@ -24,7 +29,7 @@
         <button class="calculatrice__buttons--btn">7</button>
         <button class="calculatrice__buttons--btn">8</button>
         <button class="calculatrice__buttons--btn">9</button>
-        <button class="calculatrice__buttons--btn">X</button>
+        <button class="calculatrice__buttons--btn">*</button>
         <button class="calculatrice__buttons--btn">4</button>
         <button class="calculatrice__buttons--btn">5</button>
         <button class="calculatrice__buttons--btn">6</button>
@@ -34,7 +39,7 @@
         <button class="calculatrice__buttons--btn">3</button>
         <button class="calculatrice__buttons--btn">+</button>
         <button class="calculatrice__buttons--btn">0</button>
-        <button class="calculatrice__buttons--btn">,</button>
+        <button class="calculatrice__buttons--btn">.</button>
         <button class="calculatrice__buttons--btn">=</button>
       </div>
     </section>
